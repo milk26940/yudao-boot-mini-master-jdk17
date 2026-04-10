@@ -179,4 +179,8 @@ public interface ErrorCodeConstants {
     ErrorCode SECOND_FAVORITE_NOT_EXISTS = new ErrorCode(1_002_029_007, "当前收藏记录不存在");
     ErrorCode SECOND_FAVORITE_EXISTS = new ErrorCode(1_002_029_008, "当前商品已收藏");
     ErrorCode SECOND_GOODS_IMAGE_NOT_EXISTS = new ErrorCode(1_002_029_009, "当前商品图片不存在");
+    ErrorCode CAMPUS_PORTAL_BAD_CREDENTIALS = new ErrorCode(1_002_029_010, "校园用户登录失败，学号或密码错误");
+    ErrorCode CAMPUS_PORTAL_PENDING_AUDIT = new ErrorCode(1_002_029_011, "注册申请尚未审核通过，请稍后再试");
+    ErrorCode CAMPUS_PORTAL_AUDIT_REJECTED = new ErrorCode(1_002_029_012, "注册申请未通过审核，请联系管理员");
+    ErrorCode CAMPUS_PORTAL_DISABLED = new ErrorCode(1_002_029_013, "当前校园用户账号已停用");
 }

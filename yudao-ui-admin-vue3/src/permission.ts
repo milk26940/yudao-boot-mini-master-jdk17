@@ -53,7 +53,11 @@ const whiteList = [
   '/auth-redirect',
   '/bind',
   '/register',
-  '/oauthLogin/gitee'
+  '/oauthLogin/gitee',
+  '/campus-portal',
+  '/campus-portal/login',
+  '/campus-portal/register',
+  '/campus-portal/goods'
 ]
 
 // 路由加载前

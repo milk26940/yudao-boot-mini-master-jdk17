@@ -8,25 +8,27 @@ START TRANSACTION;
 DELETE FROM system_role_menu
 WHERE menu_id IN (
   6100,
-  6101, 6102, 6103, 6104, 6105, 6106,
+  6101, 6102, 6103, 6104, 6105, 6106, 6107,
   6111, 6112, 6113, 6114,
   6121, 6122, 6123, 6124,
   6131, 6132, 6133, 6134, 6135,
   6141, 6142, 6143, 6144,
   6151, 6152, 6153, 6154,
-  6161, 6162, 6163, 6164
+  6161, 6162, 6163, 6164,
+  6171
 );
 
 DELETE FROM system_menu
 WHERE id IN (
   6100,
-  6101, 6102, 6103, 6104, 6105, 6106,
+  6101, 6102, 6103, 6104, 6105, 6106, 6107,
   6111, 6112, 6113, 6114,
   6121, 6122, 6123, 6124,
   6131, 6132, 6133, 6134, 6135,
   6141, 6142, 6143, 6144,
   6151, 6152, 6153, 6154,
-  6161, 6162, 6163, 6164
+  6161, 6162, 6163, 6164,
+  6171
 );
 
 INSERT INTO system_menu
@@ -38,11 +40,12 @@ INSERT INTO system_menu
   (id, name, permission, type, sort, parent_id, path, icon, component, component_name, status, visible, keep_alive, always_show, creator, updater, deleted)
 VALUES
   (6101, CONVERT(0xE794A8E688B7E5AEA1E6A0B8E4B88EE7AEA1E79086 USING utf8mb4), 'system:campus-user:query', 2, 1, 6100, 'user', 'ep:user', 'campus/user/index', 'CampusUser', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
-  (6102, CONVERT(0xE59586E59381E58886E7B1BBE7AEA1E79086 USING utf8mb4), 'system:second-category:query', 2, 2, 6100, 'category', 'ep:collection', 'campus/category/index', 'CampusCategory', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
-  (6103, CONVERT(0xE4BA8CE6898BE59586E59381E7AEA1E79086 USING utf8mb4), 'system:second-goods:query', 2, 3, 6100, 'goods', 'ep:goods', 'campus/goods/index', 'CampusGoods', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
-  (6104, CONVERT(0xE6B182E8B4ADE4BFA1E681AFE7AEA1E79086 USING utf8mb4), 'system:second-wanted:query', 2, 4, 6100, 'wanted', 'ep:shopping-cart-full', 'campus/wanted/index', 'CampusWanted', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
-  (6105, CONVERT(0xE8AF84E8AEBAE7AEA1E79086 USING utf8mb4), 'system:second-comment:query', 2, 5, 6100, 'comment', 'ep:chat-line-square', 'campus/comment/index', 'CampusComment', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
-  (6106, CONVERT(0xE8AEA2E58D95E7AEA1E79086 USING utf8mb4), 'system:second-order:query', 2, 6, 6100, 'order', 'ep:tickets', 'campus/order/index', 'CampusOrder', 0, b'1', b'1', b'1', 'admin', 'admin', b'0');
+  (6102, CONVERT(0xE695B0E68DAEE79C8BE69DBF USING utf8mb4), 'system:campus-dashboard:query', 2, 2, 6100, 'dashboard', 'ep:data-analysis', 'campus/dashboard/index', 'CampusDashboard', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
+  (6103, CONVERT(0xE59586E59381E58886E7B1BBE7AEA1E79086 USING utf8mb4), 'system:second-category:query', 2, 3, 6100, 'category', 'ep:collection', 'campus/category/index', 'CampusCategory', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
+  (6104, CONVERT(0xE4BA8CE6898BE59586E59381E7AEA1E79086 USING utf8mb4), 'system:second-goods:query', 2, 4, 6100, 'goods', 'ep:goods', 'campus/goods/index', 'CampusGoods', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
+  (6105, CONVERT(0xE6B182E8B4ADE4BFA1E681AFE7AEA1E79086 USING utf8mb4), 'system:second-wanted:query', 2, 5, 6100, 'wanted', 'ep:shopping-cart-full', 'campus/wanted/index', 'CampusWanted', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
+  (6106, CONVERT(0xE8AF84E8AEBAE7AEA1E79086 USING utf8mb4), 'system:second-comment:query', 2, 6, 6100, 'comment', 'ep:chat-line-square', 'campus/comment/index', 'CampusComment', 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
+  (6107, CONVERT(0xE8AEA2E58D95E7AEA1E79086 USING utf8mb4), 'system:second-order:query', 2, 7, 6100, 'order', 'ep:tickets', 'campus/order/index', 'CampusOrder', 0, b'1', b'1', b'1', 'admin', 'admin', b'0');
 
 INSERT INTO system_menu
   (id, name, permission, type, sort, parent_id, path, icon, component, component_name, status, visible, keep_alive, always_show, creator, updater, deleted)
@@ -51,6 +54,11 @@ VALUES
   (6112, CONVERT(0xE794A8E688B7E696B0E5A29E USING utf8mb4), 'system:campus-user:create', 3, 2, 6101, '', '', '', NULL, 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
   (6113, CONVERT(0xE794A8E688B7E4BFAEE694B9 USING utf8mb4), 'system:campus-user:update', 3, 3, 6101, '', '', '', NULL, 0, b'1', b'1', b'1', 'admin', 'admin', b'0'),
   (6114, CONVERT(0xE794A8E688B7E5AEA1E6A0B8 USING utf8mb4), 'system:campus-user:audit', 3, 4, 6101, '', '', '', NULL, 0, b'1', b'1', b'1', 'admin', 'admin', b'0');
+
+INSERT INTO system_menu
+  (id, name, permission, type, sort, parent_id, path, icon, component, component_name, status, visible, keep_alive, always_show, creator, updater, deleted)
+VALUES
+  (6171, CONVERT(0xE79C8BE69DBFE69FA5E8AFA2 USING utf8mb4), 'system:campus-dashboard:query', 3, 1, 6102, '', '', '', NULL, 0, b'1', b'1', b'1', 'admin', 'admin', b'0');
 
 INSERT INTO system_menu
   (id, name, permission, type, sort, parent_id, path, icon, component, component_name, status, visible, keep_alive, always_show, creator, updater, deleted)
@@ -103,6 +111,7 @@ VALUES
   (1, 6104, 'admin', 'admin', b'0', 0),
   (1, 6105, 'admin', 'admin', b'0', 0),
   (1, 6106, 'admin', 'admin', b'0', 0),
+  (1, 6107, 'admin', 'admin', b'0', 0),
   (1, 6111, 'admin', 'admin', b'0', 0),
   (1, 6112, 'admin', 'admin', b'0', 0),
   (1, 6113, 'admin', 'admin', b'0', 0),
@@ -127,6 +136,7 @@ VALUES
   (1, 6161, 'admin', 'admin', b'0', 0),
   (1, 6162, 'admin', 'admin', b'0', 0),
   (1, 6163, 'admin', 'admin', b'0', 0),
-  (1, 6164, 'admin', 'admin', b'0', 0);
+  (1, 6164, 'admin', 'admin', b'0', 0),
+  (1, 6171, 'admin', 'admin', b'0', 0);
 
 COMMIT;

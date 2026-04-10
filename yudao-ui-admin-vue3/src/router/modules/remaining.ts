@@ -185,6 +185,46 @@ const remainingRouter: AppRouteRecordRaw[] = [
     }
   },
   {
+    path: '/campus-portal',
+    component: () => import('@/views/campus-portal/Home.vue'),
+    name: 'CampusPortalHome',
+    meta: {
+      hidden: true,
+      title: '校园门户首页',
+      noTagsView: true
+    }
+  },
+  {
+    path: '/campus-portal/login',
+    component: () => import('@/views/campus-portal/Login.vue'),
+    name: 'CampusPortalLogin',
+    meta: {
+      hidden: true,
+      title: '校园用户登录',
+      noTagsView: true
+    }
+  },
+  {
+    path: '/campus-portal/register',
+    component: () => import('@/views/campus-portal/Register.vue'),
+    name: 'CampusPortalRegister',
+    meta: {
+      hidden: true,
+      title: '校园用户注册',
+      noTagsView: true
+    }
+  },
+  {
+    path: '/campus-portal/goods',
+    component: () => import('@/views/campus-portal/Goods.vue'),
+    name: 'CampusPortalGoods',
+    meta: {
+      hidden: true,
+      title: '校园商品浏览',
+      noTagsView: true
+    }
+  },
+  {
     path: '/sso',
     component: () => import('@/views/Login/Login.vue'),
     name: 'SSOLogin',
