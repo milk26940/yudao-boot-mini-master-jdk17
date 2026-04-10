@@ -168,4 +168,15 @@ public interface ErrorCodeConstants {
     // ========== 站内信发送 1-002-028-000 ==========
     ErrorCode NOTIFY_SEND_TEMPLATE_PARAM_MISS = new ErrorCode(1_002_028_000, "模板参数({})缺失");
 
+    ErrorCode SECOND_CATEGORY_NOT_EXISTS = new ErrorCode(1_002_029_000, "当前二手商品分类不存在");
+    ErrorCode SECOND_GOODS_NOT_EXISTS = new ErrorCode(1_002_029_001, "当前二手商品不存在");
+
+    ErrorCode CAMPUS_USER_NOT_EXISTS = new ErrorCode(1_002_029_002, "当前校园用户不存在");
+    ErrorCode CAMPUS_USER_STUDENT_NO_EXISTS = new ErrorCode(1_002_029_003, "当前学号已存在");
+    ErrorCode SECOND_WANTED_NOT_EXISTS = new ErrorCode(1_002_029_004, "当前求购信息不存在");
+    ErrorCode SECOND_COMMENT_NOT_EXISTS = new ErrorCode(1_002_029_005, "当前商品评论不存在");
+    ErrorCode SECOND_ORDER_NOT_EXISTS = new ErrorCode(1_002_029_006, "当前订单不存在");
+    ErrorCode SECOND_FAVORITE_NOT_EXISTS = new ErrorCode(1_002_029_007, "当前收藏记录不存在");
+    ErrorCode SECOND_FAVORITE_EXISTS = new ErrorCode(1_002_029_008, "当前商品已收藏");
+    ErrorCode SECOND_GOODS_IMAGE_NOT_EXISTS = new ErrorCode(1_002_029_009, "当前商品图片不存在");
 }
